@@ -93,6 +93,28 @@ We add the mixin of `CollisionCallbacks` to the player class and makes it handle
 
 
 
+collsion effect:
+
+- fruit:
+
+  ![image-20250604170144721](README.assets/image-20250604170144721.png)
+
+  ![image-20250604170213240](README.assets/image-20250604170213240.png)
+
+- saw trap(jump back to the starting point):
+
+  ![image-20250604170308043](README.assets/image-20250604170308043.png)
+
+  ![image-20250604170328765](README.assets/image-20250604170328765.png)
+
+  ![image-20250604170350121](README.assets/image-20250604170350121.png)
+
+- Checkpoint(Go to the next level):
+
+  ![image-20250604170456979](README.assets/image-20250604170456979.png)
+
+  ![image-20250604170520097](README.assets/image-20250604170520097.png)
+
 In addition, we also create classes for those platforms and blocks so that they can block the player from moving vertically and horrizontally when colliding against them.
 
 

@@ -4,6 +4,7 @@ import 'package:flame/components.dart';
 import 'package:flame/events.dart';
 import 'package:flame/game.dart';
 import 'package:flame/input.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/painting.dart';
 import 'package:demo/components/Overlay/jump_button.dart';
 import 'package:demo/components/Player/player.dart';
@@ -20,7 +21,7 @@ class GamePlay extends FlameGame
   late CameraComponent cam;
   Player player = Player(character: 'Ninja Frog');
   late JoystickComponent joystick;
-  bool showControls = true;
+  bool showControls = kIsWeb ? false : true;
   bool playSounds = true;
   double soundVolume = 1.0;
   List<String> levelNames = ['Level-01', 'Level-02', 'Level-03', 'Level-04', 'Level-05'];
