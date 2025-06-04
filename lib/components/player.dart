@@ -10,7 +10,7 @@ import 'package:demo/components/custom_hitbox.dart';
 import 'package:demo/components/fruit.dart';
 import 'package:demo/components/saw.dart';
 import 'package:demo/components/utils.dart';
-import 'package:demo/pixel_adventure.dart';
+import 'package:demo/GamePlay.dart';
 
 enum PlayerState {
   idle,
@@ -23,7 +23,7 @@ enum PlayerState {
 }
 
 class Player extends SpriteAnimationGroupComponent
-    with HasGameRef<PixelAdventure>, KeyboardHandler, CollisionCallbacks {
+    with HasGameRef<GamePlay>, KeyboardHandler, CollisionCallbacks {
   String character;
   Player({
     position,

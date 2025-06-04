@@ -8,9 +8,9 @@ import 'package:demo/components/collision_block.dart';
 import 'package:demo/components/fruit.dart';
 import 'package:demo/components/player.dart';
 import 'package:demo/components/saw.dart';
-import 'package:demo/pixel_adventure.dart';
+import 'package:demo/GamePlay.dart';
 
-class Level extends World with HasGameRef<PixelAdventure> {
+class Level extends World with HasGameRef<GamePlay> {
   final String levelName;
   final Player player;
   Level({required this.levelName, required this.player});

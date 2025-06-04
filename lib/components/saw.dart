@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
-import 'package:demo/pixel_adventure.dart';
+import 'package:demo/GamePlay.dart';
 
-class Saw extends SpriteAnimationComponent with HasGameRef<PixelAdventure> {
+class Saw extends SpriteAnimationComponent with HasGameRef<GamePlay> {
   final bool isVertical;
   final double offNeg;
   final double offPos;
