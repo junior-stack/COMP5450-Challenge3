@@ -41,6 +41,8 @@ class PixelAdventure extends FlameGame
     return super.onLoad();
   }
 
+  JoystickDirection? _previousDirection;
+
   @override
   void update(double dt) {
     if (showControls) {
@@ -69,7 +71,9 @@ class PixelAdventure extends FlameGame
   }
 
   void updateJoystick() {
-    switch (joystick.direction) {
+    final dir = joystick.direction;
+
+    switch (dir) {
       case JoystickDirection.left:
       case JoystickDirection.upLeft:
       case JoystickDirection.downLeft:
@@ -84,7 +88,15 @@ class PixelAdventure extends FlameGame
         player.horizontalMovement = 0;
         break;
     }
+
+    if ((dir == JoystickDirection.upLeft || dir == JoystickDirection.upRight) &&
+        (_previousDirection != JoystickDirection.upLeft &&
+            _previousDirection != JoystickDirection.upRight)) {
+      player.hasJumped = true;
+    }
+    _previousDirection = dir;
   }
+
 
   void loadNextLevel() {
     removeWhere((component) => component is Level);
