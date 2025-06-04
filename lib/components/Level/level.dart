@@ -4,7 +4,7 @@ import 'package:flame/components.dart';
 import 'package:flame_tiled/flame_tiled.dart';
 import 'package:demo/components/Level/background_tile.dart';
 import 'package:demo/components/Item/checkpoint.dart';
-import 'package:demo/components/Item/collision_block.dart';
+import 'package:demo/components/Item/Platform.dart';
 import 'package:demo/components/Item/fruit.dart';
 import 'package:demo/components/Player/player.dart';
 import 'package:demo/components/Item/saw.dart';
@@ -15,7 +15,7 @@ class Level extends World with HasGameRef<GamePlay> {
   final Player player;
   Level({required this.levelName, required this.player});
   late TiledComponent level;
-  List<CollisionBlock> collisionBlocks = [];
+  List<Platform> collisionBlocks = [];
 
   @override
   FutureOr<void> onLoad() async {
@@ -96,7 +96,7 @@ class Level extends World with HasGameRef<GamePlay> {
       for (final collision in collisionsLayer.objects) {
         switch (collision.class_) {
           case 'Platform':
-            final platform = CollisionBlock(
+            final platform = Platform(
               position: Vector2(collision.x, collision.y),
               size: Vector2(collision.width, collision.height),
               isPlatform: true,
@@ -105,7 +105,7 @@ class Level extends World with HasGameRef<GamePlay> {
             add(platform);
             break;
           default:
-            final block = CollisionBlock(
+            final block = Platform(
               position: Vector2(collision.x, collision.y),
               size: Vector2(collision.width, collision.height),
             );

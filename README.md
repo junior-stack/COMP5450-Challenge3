@@ -33,9 +33,28 @@ dependencies:
 
 
 
+## 2. Module Component
 
+- `main.dart`: program entry, create the GameWidget instance
+- `GamePlay.dart`: an instance of FlameGame, which is a required parameter to GameWidget. We set up the joystick for mobile, camera here and it is also used to handle level switching
+- `Item/`
+  - `Checkpoint.dart`: the door of each level which marks the end of the level
+  - `fruit.dart`: the fruit prop of certain stages
+  - `Platform.dart`: the block and platform for the player to stand
+  - `saw.dart`: the trap of certain stages
+- `Level/`:
+  - `background_tile.dart`: paint the background of the game
+  - `level.dart`: extend the world instance, used to load items, players and background of the game
+- `Overlay/`:
+  - `jump_button.dart`: create the jump button for users to interact on mobile along with the joystick
+- `Player`/: 
+  - `player.dart`: the movement and collision behaviour of the player we control
 
-## 2. Key features
+- `Util/`
+  - `Utils.dart`: contain util functions
+  - `custom_hitbox.dart`: configuration of hitbox in items and players
+
+## 3. Key features
 
 ### 1. Map Design
 
@@ -108,7 +127,7 @@ Every time when the player jumps, collects the fruit or get hit by the saw trap,
 
 ![image-20250604141253017](README.assets/image-20250604141253017.png)
 
-## 3. Set up & run
+## 4. Set up & run
 
 1. After unzip the folder, open "Challenge3" as the root folder in Android studio
 2. Type `flutter pub get` to download all dependencies
@@ -116,10 +135,10 @@ Every time when the player jumps, collects the fruit or get hit by the saw trap,
 
 
 
-## 4. Physical device demo
+## 5. Physical device demo
 
 https://drive.google.com/file/d/1N0s5eTRBU9jpCCA2_85Fm91ILEHXU7yp/view?usp=drive_link
 
-## 5. Github link
+## 6. Github link
 
 https://github.com/junior-stack/COMP5450-Challenge3.git

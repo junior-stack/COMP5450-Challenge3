@@ -5,7 +5,7 @@ import 'package:flame/components.dart';
 import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/services.dart';
 import 'package:demo/components/Item/checkpoint.dart';
-import 'package:demo/components/Item/collision_block.dart';
+import 'package:demo/components/Item/Platform.dart';
 import 'package:demo/components/Util/custom_hitbox.dart';
 import 'package:demo/components/Item/fruit.dart';
 import 'package:demo/components/Item/saw.dart';
@@ -50,7 +50,7 @@ class Player extends SpriteAnimationGroupComponent
   bool hasJumped = false;
   bool gotHit = false;
   bool reachedCheckpoint = false;
-  List<CollisionBlock> collisionBlocks = [];
+  List<Platform> collisionBlocks = [];
   CustomHitbox hitbox = CustomHitbox(
     offsetX: 10,
     offsetY: 4,
