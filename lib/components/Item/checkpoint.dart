@@ -6,7 +6,7 @@ import 'package:demo/components/Player/player.dart';
 import 'package:demo/GamePlay.dart';
 
 class Checkpoint extends SpriteAnimationComponent
-    with HasGameRef<GamePlay>, CollisionCallbacks {
+    with HasGameReference<GamePlay>, CollisionCallbacks {
   Checkpoint({
     position,
     size,

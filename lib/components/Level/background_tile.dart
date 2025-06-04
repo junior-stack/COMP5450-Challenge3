@@ -5,7 +5,7 @@ import 'package:flame/parallax.dart';
 import 'package:flutter/material.dart';
 import 'package:demo/GamePlay.dart';
 
-class BackgroundTile extends ParallaxComponent with HasGameRef{
+class BackgroundTile extends ParallaxComponent{
   final String color;
   BackgroundTile({
     this.color = 'Gray',
@@ -20,7 +20,7 @@ class BackgroundTile extends ParallaxComponent with HasGameRef{
   FutureOr<void> onLoad() async {
     priority = -10;
     size = Vector2.all(64);
-    parallax = await gameRef.loadParallax(
+    parallax = await game.loadParallax(
       [ParallaxImageData('Background/$color.png')],
       baseVelocity: Vector2(0, -scrollSpeed),
       repeat: ImageRepeat.repeat,

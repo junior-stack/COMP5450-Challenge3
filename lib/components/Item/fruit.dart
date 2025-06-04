@@ -7,7 +7,7 @@ import 'package:demo/components/Util/custom_hitbox.dart';
 import 'package:demo/GamePlay.dart';
 
 class Fruit extends SpriteAnimationComponent
-    with HasGameRef<GamePlay>, CollisionCallbacks {
+    with HasGameReference<GamePlay>, CollisionCallbacks {
   final String fruit;
   Fruit({
     this.fruit = 'Apple',

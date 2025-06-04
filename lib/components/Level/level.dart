@@ -10,7 +10,7 @@ import 'package:demo/components/Player/player.dart';
 import 'package:demo/components/Item/saw.dart';
 import 'package:demo/GamePlay.dart';
 
-class Level extends World with HasGameRef<GamePlay> {
+class Level extends World with HasGameReference<GamePlay> {
   final String levelName;
   final Player player;
   Level({required this.levelName, required this.player});

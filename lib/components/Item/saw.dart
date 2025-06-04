@@ -4,7 +4,7 @@ import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:demo/GamePlay.dart';
 
-class Saw extends SpriteAnimationComponent with HasGameRef<GamePlay> {
+class Saw extends SpriteAnimationComponent with HasGameReference<GamePlay> {
   final bool isVertical;
   final double offNeg;
   final double offPos;

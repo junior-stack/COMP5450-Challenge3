@@ -23,7 +23,7 @@ enum PlayerState {
 }
 
 class Player extends SpriteAnimationGroupComponent
-    with HasGameRef<GamePlay>, KeyboardHandler, CollisionCallbacks {
+    with HasGameReference<GamePlay>, KeyboardHandler, CollisionCallbacks {
   String character;
   Player({
     position,

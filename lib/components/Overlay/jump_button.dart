@@ -5,7 +5,7 @@ import 'package:flame/events.dart';
 import 'package:demo/GamePlay.dart';
 
 class JumpButton extends SpriteComponent
-    with HasGameRef<GamePlay>, TapCallbacks {
+    with HasGameReference<GamePlay>, TapCallbacks {
   JumpButton();
 
   final margin = 32;
