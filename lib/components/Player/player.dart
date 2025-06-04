@@ -4,12 +4,12 @@ import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/services.dart';
-import 'package:demo/components/checkpoint.dart';
-import 'package:demo/components/collision_block.dart';
-import 'package:demo/components/custom_hitbox.dart';
-import 'package:demo/components/fruit.dart';
-import 'package:demo/components/saw.dart';
-import 'package:demo/components/utils.dart';
+import 'package:demo/components/Item/checkpoint.dart';
+import 'package:demo/components/Item/collision_block.dart';
+import 'package:demo/components/Util/custom_hitbox.dart';
+import 'package:demo/components/Item/fruit.dart';
+import 'package:demo/components/Item/saw.dart';
+import 'package:demo/components/Util/utils.dart';
 import 'package:demo/GamePlay.dart';
 
 enum PlayerState {

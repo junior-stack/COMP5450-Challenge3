@@ -2,12 +2,12 @@ import 'dart:async';
 
 import 'package:flame/components.dart';
 import 'package:flame_tiled/flame_tiled.dart';
-import 'package:demo/components/background_tile.dart';
-import 'package:demo/components/checkpoint.dart';
-import 'package:demo/components/collision_block.dart';
-import 'package:demo/components/fruit.dart';
-import 'package:demo/components/player.dart';
-import 'package:demo/components/saw.dart';
+import 'package:demo/components/Level/background_tile.dart';
+import 'package:demo/components/Item/checkpoint.dart';
+import 'package:demo/components/Item/collision_block.dart';
+import 'package:demo/components/Item/fruit.dart';
+import 'package:demo/components/Player/player.dart';
+import 'package:demo/components/Item/saw.dart';
 import 'package:demo/GamePlay.dart';
 
 class Level extends World with HasGameRef<GamePlay> {

@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flame_audio/flame_audio.dart';
-import 'package:demo/components/custom_hitbox.dart';
+import 'package:demo/components/Util/custom_hitbox.dart';
 import 'package:demo/GamePlay.dart';
 
 class Fruit extends SpriteAnimationComponent

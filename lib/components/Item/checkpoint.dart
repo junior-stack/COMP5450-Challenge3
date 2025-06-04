@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
-import 'package:demo/components/player.dart';
+import 'package:demo/components/Player/player.dart';
 import 'package:demo/GamePlay.dart';
 
 class Checkpoint extends SpriteAnimationComponent
