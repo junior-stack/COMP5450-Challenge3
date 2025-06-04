@@ -4,7 +4,6 @@ import 'package:flame/components.dart';
 import 'package:flame_tiled/flame_tiled.dart';
 import 'package:demo/components/background_tile.dart';
 import 'package:demo/components/checkpoint.dart';
-import 'package:demo/components/chicken.dart';
 import 'package:demo/components/collision_block.dart';
 import 'package:demo/components/fruit.dart';
 import 'package:demo/components/player.dart';
@@ -38,7 +37,7 @@ class Level extends World with HasGameRef<PixelAdventure> {
       final backgroundColor =
           backgroundLayer.properties.getValue('BackgroundColor');
       final backgroundTile = BackgroundTile(
-        color: backgroundColor ?? 'Gray',
+        color: backgroundColor ?? 'Brown',
         position: Vector2(0, 0),
       );
       add(backgroundTile);
@@ -83,17 +82,6 @@ class Level extends World with HasGameRef<PixelAdventure> {
               size: Vector2(spawnPoint.width, spawnPoint.height),
             );
             add(checkpoint);
-            break;
-          case 'Chicken':
-            final offNeg = spawnPoint.properties.getValue('offNeg');
-            final offPos = spawnPoint.properties.getValue('offPos');
-            final chicken = Chicken(
-              position: Vector2(spawnPoint.x, spawnPoint.y),
-              size: Vector2(spawnPoint.width, spawnPoint.height),
-              offNeg: offNeg,
-              offPos: offPos,
-            );
-            add(chicken);
             break;
           default:
         }

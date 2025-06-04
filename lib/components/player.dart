@@ -5,7 +5,6 @@ import 'package:flame/components.dart';
 import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/services.dart';
 import 'package:demo/components/checkpoint.dart';
-import 'package:demo/components/chicken.dart';
 import 'package:demo/components/collision_block.dart';
 import 'package:demo/components/custom_hitbox.dart';
 import 'package:demo/components/fruit.dart';
@@ -116,7 +115,6 @@ class Player extends SpriteAnimationGroupComponent
     if (!reachedCheckpoint) {
       if (other is Fruit) other.collidedWithPlayer();
       if (other is Saw) _respawn();
-      if (other is Chicken) other.collidedWithPlayer();
       if (other is Checkpoint) _reachedCheckpoint();
     }
     super.onCollisionStart(intersectionPoints, other);
