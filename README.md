@@ -96,9 +96,17 @@ In addition, we apply gravity to the player so that the player can fall while ju
 
 <img src="README.assets/image-20250604123510256.png" alt="image-20250604123510256" style="zoom:50%;" />
 
+This is done by calling `_applyGravity` in `update` method in Player class to update the player's position: 
+
+![image-20250604140859553](README.assets/image-20250604140859553.png)
 
 
 
+### 6.  Audio player
+
+Every time when the player jumps, collects the fruit or get hit by the saw trap, there will be a sound effect. This is done by calling the `FlameAudio.play` in those movement trigger methods(Example as following):
+
+![image-20250604141253017](README.assets/image-20250604141253017.png)
 
 ## 3. Set up & run
 
@@ -108,6 +116,10 @@ In addition, we apply gravity to the player so that the player can fall while ju
 
 
 
-## 4. Github link
+## 4. Physical device demo
+
+https://drive.google.com/file/d/1N0s5eTRBU9jpCCA2_85Fm91ILEHXU7yp/view?usp=drive_link
+
+## 5. Github link
 
 https://github.com/junior-stack/COMP5450-Challenge3.git
