@@ -19,8 +19,8 @@ class Checkpoint extends SpriteAnimationComponent
   FutureOr<void> onLoad() {
     // debugMode = true;
     add(RectangleHitbox(
-      position: Vector2(3, 12),
-      size: Vector2(60, 50),
+      position: Vector2(18, 56),
+      size: Vector2(12, 8),
       collisionType: CollisionType.passive,
     ));
 
@@ -30,7 +30,7 @@ class Checkpoint extends SpriteAnimationComponent
       SpriteAnimationData.sequenced(
         amount: 1,
         stepTime: 1,
-        textureSize: Vector2(46, 56),
+        textureSize: Vector2.all(64),
       ),
     );
     return super.onLoad();
@@ -44,18 +44,18 @@ class Checkpoint extends SpriteAnimationComponent
   }
 
   void _reachedCheckpoint() async {
-    // animation = SpriteAnimation.fromFrameData(
-    //   game.images.fromCache(
-    //       'Items/Checkpoints/Checkpoint/Checkpoint (Flag Out) (64x64).png'),
-    //   SpriteAnimationData.sequenced(
-    //     amount: 26,
-    //     stepTime: 0.05,
-    //     textureSize: Vector2.all(64),
-    //     loop: false,
-    //   ),
-    // );
-    //
-    // await animationTicker?.completed;
+    animation = SpriteAnimation.fromFrameData(
+      game.images.fromCache(
+          'Items/Checkpoints/Checkpoint/Checkpoint (Flag Out) (64x64).png'),
+      SpriteAnimationData.sequenced(
+        amount: 26,
+        stepTime: 0.05,
+        textureSize: Vector2.all(64),
+        loop: false,
+      ),
+    );
+
+    await animationTicker?.completed;
 
     animation = SpriteAnimation.fromFrameData(
       game.images.fromCache(
@@ -63,8 +63,7 @@ class Checkpoint extends SpriteAnimationComponent
       SpriteAnimationData.sequenced(
         amount: 10,
         stepTime: 0.05,
-        textureSize: Vector2(46, 56),
-        loop: false,
+        textureSize: Vector2.all(64),
       ),
     );
   }
