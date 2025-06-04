@@ -5,7 +5,7 @@ import 'package:flame/events.dart';
 import 'package:flame/game.dart';
 import 'package:flame/input.dart';
 import 'package:flutter/painting.dart';
-import 'package:demo/components/jump_button.dart';
+import 'package:demo/components/Overlay/jump_button.dart';
 import 'package:demo/components/player.dart';
 import 'package:demo/components/level.dart';
 
