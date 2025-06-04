@@ -153,7 +153,7 @@ Every time when the player jumps, collects the fruit or get hit by the saw trap,
 
 1. After unzip the folder, open "Challenge3" as the root folder in Android studio
 2. Type `flutter pub get` to download all dependencies
-3. Choose the device to be either web(Chrome) or your mobile emulator, then press the run button to run the project
+3. Choose the device to be either web(Chrome) or your mobile emulator, then press the run button to run the project(If the joystick is not displayed the first time properly, it's likely because of the cache issue. In this case, you need to reboot the app in the emulate to make it display)
 
 
 
